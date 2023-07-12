@@ -1,18 +1,18 @@
-import React, { lazy, Suspense } from 'react';
+import { lazy } from 'react';
 // import HomeLayout from '../layouts/HomeLayout';
 // import NotFound from '../layouts/NotFound';
-import { Navigate } from 'react-router-dom';
+// import { Navigate } from 'react-router-dom';
 // import { Shell } from '../components/shell';
 
-const SuspenseComponent = ( Component ) => ( props ) => {
-  return (
-    <Suspense fallback={null}>
-      <Component {...props}></Component>
-    </Suspense>
-  )
-}
+// const SuspenseComponent = ( Component ) => ( props ) => {
+//   return (
+//     <Suspense fallback={null}>
+//       <Component {...props}></Component>
+//     </Suspense>
+//   )
+// }
 
-const Shell = lazy(() => import("../components/shell"));
+// const Shell = lazy(() => import("../components/shell"));
 const HomeLPage = lazy(() => import("../components/HomePage"));
 // const ShopListComponent = lazy(() => import("../pages/shopping"));
 // const WashComponent = lazy(() => import("../pages/wash"));

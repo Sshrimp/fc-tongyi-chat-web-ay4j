@@ -1,9 +1,4 @@
-import { MantineProvider } from '@mantine/core';
 import './App.less'
-import { Notifications } from '@mantine/notifications';
-import { WantMore } from './components/want-more';
-import { useGlobalStore } from './composerables/state';
-import Watermark from 'watermark-plus';
 import { useEffect } from 'react';
 import { useRoutes } from 'react-router';
 import ALLRoutes from './routes/index';
@@ -14,7 +9,7 @@ export const Context = createContext('')
 
 const App = () => {
 
-  let routes = useRoutes(ALLRoutes);
+  const routes = useRoutes(ALLRoutes);
 
   const goEasy = GoEasy.getInstance({
     host: 'hangzhou.goeasy.io', //新加坡host：singapore.goeasy.io

@@ -9,6 +9,12 @@ export const Context = createContext('')
 
 const App = () => {
 
+  document.documentElement.addEventListener('touchstart', function (event) {
+    if (event.touches.length > 1) {
+      event.preventDefault();
+    }
+  }, false);
+
   const routes = useRoutes(ALLRoutes);
 
   const goEasy = GoEasy.getInstance({

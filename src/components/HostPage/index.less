@@ -1,0 +1,42 @@
+.HM-host-container {
+    display: flex;
+
+    .HM-host-read-list, .HM-host-select-list {
+        width: 50vw;
+        height:  100vh;
+        overflow: scroll;
+
+        .HM-list-title {
+            font-weight: bold;
+            color: #fff;
+        }
+        .HM-list-kind-title {
+            background-color: #1f65ff;
+        }
+        .HM-list-outsied-title {
+            background-color: #46d5ff;
+        }
+        .HM-list-minion-title {
+            background-color: #ce0100 ;
+        }
+        .HM-list-demon-title {
+            background-color: #8b0000;
+        }
+        .HM-list-role-selected {
+            background-color: rgb(240 240 240);
+            border-radius:  4px;
+        }
+        .HM-list-role {
+            display: flex;
+
+            .HM-kind-image {
+                max-width: 60px;
+            }
+
+            .HM-kind-name {
+                display: flex;
+                align-items: center;
+            }
+        }
+    }
+}

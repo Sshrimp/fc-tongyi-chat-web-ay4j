@@ -1,23 +1,18 @@
 import { useContext } from 'react'
 import { Context } from '../../App';
+import { useNavigate } from 'react-router-dom'
+
+import './index.less'
 
 const HomePage = () => {
     const goEasy = useContext(Context) as any;
+    console.log(goEasy);
+    const navigate = useNavigate()
 
-    const woaini = () => {
-        goEasy.pubsub.publish({
-            channel: "test_channel",//替换为您自己的channel
-            message: "爱你宝贝!",//替换为您想要发送的消息内容
-            onSuccess:function(){
-                console.log("消息发布成功。");
-            },
-            onFailed: function (error) {
-                console.log("消息发送失败，错误编码："+error.code+" 错误信息："+error.content);
-            }})
-    }
 
     return <div className="HM-blood-home-page">
-        <button onClick={() => {woaini()}}>123123</button>
+      <div onClick={() => navigate('/hostPage')} className='HM-blood-home-page-common HM-blood-home-page-blue'> 血 染 </div>
+      <div className='HM-blood-home-page-common HM-blood-home-page-red'>钟 楼 </div>
     </div>
 
 };

@@ -1,7 +1,7 @@
 import { lazy } from 'react';
 // import HomeLayout from '../layouts/HomeLayout';
 // import NotFound from '../layouts/NotFound';
-// import { Navigate } from 'react-router-dom';
+import { Navigate } from 'react-router-dom';
 // import { Shell } from '../components/shell';
 
 // const SuspenseComponent = ( Component ) => ( props ) => {
@@ -14,6 +14,7 @@ import { lazy } from 'react';
 
 // const Shell = lazy(() => import("../components/shell"));
 const HomeLPage = lazy(() => import("../components/HomePage"));
+const HostPage = lazy(() => import("../components/HostPage"));
 // const ShopListComponent = lazy(() => import("../pages/shopping"));
 // const WashComponent = lazy(() => import("../pages/wash"));
 // const MyComponent = lazy(() => import("../pages/my"));
@@ -23,7 +24,7 @@ const HomeLPage = lazy(() => import("../components/HomePage"));
 
 export default [
   {
-    path: "/",
+    path: "/homepage",
     element: <HomeLPage />,
     // children: [
     //   {
@@ -36,5 +37,13 @@ export default [
     //     element: <NotFound />
     //   }
     // ]
+  },
+  {
+    path: "/hostPage",
+    element: <HostPage />,
+  },
+  {
+    path: "/",
+    element: <Navigate to="/homepage"/>,
   }
 ];
